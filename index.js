@@ -33,7 +33,6 @@ module.exports = async (config) => {
   /**
    * render
    */
-  console.log(result)
   await renderTemplates(folderPath, result)
 
   /**
