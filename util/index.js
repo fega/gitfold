@@ -5,11 +5,16 @@ const defaults = require('./defaultRepos')
 const glob = promisify(require('glob'));
 const path = require('path')
 const fs = require('fs')
-const pLimit = require('p-limit')(64);
-var recursive = require("recursive-readdir");
+const pLimit = require('p-limit').default(64);
+const recursive = require("recursive-readdir");
+const chalk = require('chalk').default;
 
 
 const writeFile = promisify(fs.writeFile);
+
+module.exports.log = (...items) => {
+  console.log(chalk.cyan('[gitfold]'), chalk.yellow('-'), ...items)
+}
 
 
 module.exports.deleteGit = (folder) => {
