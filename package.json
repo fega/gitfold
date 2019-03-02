@@ -1,0 +1,25 @@
+{
+  "name": "gitfold",
+  "version": "0.1.0",
+  "description": "A git based scafolding system ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gitfold": "./bin/index.js",
+    "god": "./bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2",
+    "install": "^0.12.2",
+    "npm": "^6.8.0",
+    "p-limit": "^2.2.0",
+    "recursive-readdir": "^2.2.2",
+    "shelljs": "^0.8.3",
+    "template-file": "^3.0.1"
+  }
+}
